@@ -1,10 +1,10 @@
-task gitExecutableHooks {
+tasks.register('gitExecutableHooks') {
     doLast {
         Runtime.getRuntime().exec("chmod -R +x .git/hooks/")
     }
 }
 
-task installGitHooks(type: Copy) {
+tasks.register('installGitHooks', Copy) {
     from new File("${rootProject.rootDir}/config/git/pre-commit")
     into { new File("${rootProject.rootDir}/.git/hooks") }
 }
