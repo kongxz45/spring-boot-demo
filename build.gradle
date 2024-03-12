@@ -11,6 +11,8 @@ java {
     sourceCompatibility = '17'
 }
 
+apply plugin: 'checkstyle'
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
