@@ -15,6 +15,7 @@ java {
 apply plugin: 'checkstyle'
 
 apply from: rootProject.file('gradle/config/jacoco-config.gradle')
+apply from: rootProject.file('gradle/config/git-hooks.gradle')
 
 configurations {
     compileOnly {
