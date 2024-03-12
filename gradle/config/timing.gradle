@@ -8,6 +8,7 @@ class TimingsListener implements TaskExecutionListener, BuildListener {
         timeStarted = System.currentTimeMillis()
     }
 
+
     @Override
     void afterExecute(Task task, TaskState taskState) {
         def s = (System.currentTimeMillis() - timeStarted) * 1.0 / 1000.0f
