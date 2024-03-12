@@ -1,0 +1,69 @@
+apply plugin: 'jacoco'
+
+def generalExcludes = [
+        '**/com/sbux/springbootv3demo/SpringBootV3DemoApplication.java**'
+
+]
+
+def coverageExcludes = [
+        '**/infrastructure/**',
+        '**/request/**',
+        '**/response/**',
+        '**/rest/**',
+        '**/config/**',
+        '**/constant/**',
+        '**/adapter/**',
+        '**/domain/event/**',
+        '**/mapper/**',
+        '**/application/**Factory**',
+        '**/domain/model/**'
+]
+
+test {
+    jacoco {
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.8"
+    reportsDirectory = layout.buildDirectory.dir("$buildDir/reports/jacoco")
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: generalExcludes + coverageExcludes)
+        }))
+    }
+}
+
+jacocoTestCoverageVerification {
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: generalExcludes + coverageExcludes)
+        }))
+    }
+
+    violationRules {
+        rule {
+            limit {
+                counter = "LINE"
+                value = 'COVEREDRATIO'
+                minimum = 0.1
+            }
+            limit {
+                counter = "BRANCH"
+                value = 'COVEREDRATIO'
+                minimum = 0.1
+            }
+        }
+    }
+}
+
+jacocoTestCoverageVerification.dependsOn jacocoTestReport
+check.dependsOn jacocoTestCoverageVerification
