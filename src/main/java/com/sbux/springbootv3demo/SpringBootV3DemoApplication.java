@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootV3DemoApplication {
 
   public static void main(String[] args) {
+    String message="11111";
     SpringApplication.run(SpringBootV3DemoApplication.class, args);
   }
 
