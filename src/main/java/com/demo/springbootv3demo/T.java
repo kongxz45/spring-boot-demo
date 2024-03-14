@@ -4,6 +4,8 @@ public class T {
 
   public void msg(String mes) {
     Y y = new Y();
+    Y y2 = new Y();
+    Y y3 = new Y();
 
     System.out.printf("1111");
   }
