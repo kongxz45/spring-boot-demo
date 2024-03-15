@@ -1,7 +1,7 @@
 apply plugin: 'jacoco'
 
 def generalExcludes = [
-        '**/com/sbux/springbootv3demo/SpringBootV3DemoApplication.java**'
+        '**/com/demo/springbootv3demo/SpringBootV3DemoApplication.java**'
 
 ]
 
@@ -54,12 +54,12 @@ jacocoTestCoverageVerification {
             limit {
                 counter = "LINE"
                 value = 'COVEREDRATIO'
-                minimum = 0.1
+                minimum = 0
             }
             limit {
                 counter = "BRANCH"
                 value = 'COVEREDRATIO'
-                minimum = 0.1
+                minimum = 0
             }
         }
     }

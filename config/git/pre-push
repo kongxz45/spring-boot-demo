@@ -1,11 +1,18 @@
 #!/bin/sh
 
+# stash all files that are not in stage or untracked state
+git stash -q --keep-index --include-untracked
+
 # run gradle task again to make sure no missed files
 ./gradlew clean build
 
 # store the last exit code in a variable
 RESULT=$?
 echo "gradle task result :"$RESULT
+
+# restore code repository
+git stash pop -q
+
 
 if [ $RESULT -ne 0 ]; then
         exit 1
