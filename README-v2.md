@@ -4,19 +4,18 @@ Simple overview of use/purpose.
 
 ## Catalogue
 - [Introduction](#Introduction)
-  - [开发前的配置要求](#开发前的配置要求)
 - [Basics](#Basics)
   - [Prerequisite](#Prerequisite)
-  - [Installation & Configuration](#Installation&Configuration)
-  - [Executing program](#Executing program)
+  - [Installation & Configuration](#Installation-and-Configuration)
+  - [Executing program](#Executing-program)
   - [Dependencies](#Dependencies)
 - [Advanced](#Advanced)
-  - [Technical Architecture](#Technical Architecture)
-  - [Project Directories](#Project Directories)
-  - [Module Description](#Module Description)
-  - [Upstream and Downstream Services](#Upstream and Downstream Services)
-- [Team Members](#Team Members)
-- [Version History](#Version History)
+  - [Technical Architecture](#Technical-Architecture)
+  - [Project Directories](#Project-Directories)
+  - [Module Description](#Module-Description)
+  - [Upstream and Downstream Services](#Upstream-and-Downstream-Services)
+- [Team Members](#Team-Members)
+- [Version History](#Version-History)
 - [Appendix](#Appendix)
   - [Glossary](#Glossary)
   - [Recipes](#Recipes)
@@ -36,7 +35,7 @@ An in-depth paragraph about your project and overview of use.
 * ex. Windows 10
 
 
-### Installation & Configuration
+### Installation and Configuration
 * How/where to download your program
 * Any modifications needed to be made to files/folders
 
