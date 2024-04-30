@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootV3DemoApplication {
 
   public static void main(String[] args) {
+
     System.out.print("System starting111111");
+
     SpringApplication.run(SpringBootV3DemoApplication.class, args);
     System.out.println("System started1111111");
 
